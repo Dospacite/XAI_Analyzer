@@ -31,25 +31,32 @@ Minimum steps to run the application locally:
    cp .env.example .env
    ```
 
-3. Edit `.env` and set the required values:
+3. Edit `.env` and set only the values that are specific to your run:
 
    ```dotenv
    HF_TOKEN=hf_your_token
    SCRAPER_TOKEN=replace-with-a-long-random-value
-   SQLITE_PATH=/data/traceguard.sqlite3
-   PUBLIC_APP_URL=http://localhost:3000
+   ```
 
+   If you are creating or managing endpoints under a Hugging Face account or
+   organization other than `Dospacite`, also set:
+
+   ```dotenv
+   HF_ENDPOINT_NAMESPACE=your-huggingface-username-or-org
+   ```
+
+   If the Hugging Face endpoints already exist, set their URLs:
+
+   ```dotenv
    HF_QWEN_ENDPOINT_URL=https://your-qwen-endpoint.endpoints.huggingface.cloud
    HF_LLAMA_ENDPOINT_URL=https://your-llama-endpoint.endpoints.huggingface.cloud
    HF_DEEPSEEK_ENDPOINT_URL=https://your-deepseek-endpoint.endpoints.huggingface.cloud
    HF_GEMMA_ENDPOINT_URL=https://your-gemma-endpoint.endpoints.huggingface.cloud
-
-   HF_ENDPOINT_NAMESPACE=your-huggingface-namespace
-   HF_QWEN_ENDPOINT_NAME=your-qwen-endpoint-name
-   HF_LLAMA_ENDPOINT_NAME=your-llama-endpoint-name
-   HF_DEEPSEEK_ENDPOINT_NAME=your-deepseek-endpoint-name
-   HF_GEMMA_ENDPOINT_NAME=your-gemma-endpoint-name
    ```
+
+   Keep the default endpoint names unless you intentionally created endpoints
+   with different names. Keep the default `SQLITE_PATH` and `PUBLIC_APP_URL` for
+   local Docker usage.
 
    Follow-up chat also needs `QWEN_API_KEY`, `QWEN_BASE_URL`, and `QWEN_MODEL`.
    URL analysis can start without those values, but follow-up messages will not
