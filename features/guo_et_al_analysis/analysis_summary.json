@@ -1,0 +1,366 @@
+{
+  "input": "experimentation/guo_et_al_2021_hinphish/cross_source_features_30k.jsonl",
+  "rows": 51298,
+  "feature_count": 216,
+  "model_feature_count": 210,
+  "zero_variance_feature_count": 6,
+  "zero_variance_features": [
+    "metadata.final_host_changed",
+    "metadata.final_scheme_changed",
+    "metadata.final_url_changed",
+    "metadata.redirect_count",
+    "metadata.redirect_domain_change_count",
+    "url.non_default_port_present"
+  ],
+  "label_counts": {
+    "phishing": 29046,
+    "benign": 22252
+  },
+  "source_counts": {
+    "guo_et_al_2021_hinphish.phish_sample_30k": 29046,
+    "guo_et_al_2021_hinphish.benign_sample_30k": 22252
+  },
+  "source_label_nmi": 1.0,
+  "random_forest": {
+    "accuracy": 1.0,
+    "roc_auc": 0.9999999999999999,
+    "classification_report": {
+      "benign": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 4451.0
+      },
+      "phishing": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5809.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10260.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10260.0
+      }
+    }
+  },
+  "top_random_forest_features": [
+    {
+      "feature": "url.slash_count",
+      "importance": 0.13476334725499034
+    },
+    {
+      "feature": "url.special_character_count",
+      "importance": 0.11863355941780723
+    },
+    {
+      "feature": "url.path_length",
+      "importance": 0.09773874568462126
+    },
+    {
+      "feature": "url.requested_url_length",
+      "importance": 0.06758019041894726
+    },
+    {
+      "feature": "url.token_count",
+      "importance": 0.05969449728321849
+    },
+    {
+      "feature": "url.final_url_length",
+      "importance": 0.05818480318717476
+    },
+    {
+      "feature": "url.path_segment_count",
+      "importance": 0.04921427435732591
+    },
+    {
+      "feature": "url.character_entropy",
+      "importance": 0.039395573401624764
+    },
+    {
+      "feature": "html.visible_text_length",
+      "importance": 0.03164660010500103
+    },
+    {
+      "feature": "html.internal_anchor_count",
+      "importance": 0.029741091186111117
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "importance": 0.029209936239890474
+    },
+    {
+      "feature": "html.resource_url_count",
+      "importance": 0.02311891540110511
+    },
+    {
+      "feature": "html.total_tag_count",
+      "importance": 0.02159518779622413
+    },
+    {
+      "feature": "url.dot_count",
+      "importance": 0.019702946744655725
+    },
+    {
+      "feature": "html.div_count",
+      "importance": 0.01704095995653701
+    },
+    {
+      "feature": "html.visible_word_count",
+      "importance": 0.015401544682246178
+    },
+    {
+      "feature": "url.subdomain_length",
+      "importance": 0.015033511208228639
+    },
+    {
+      "feature": "url.digit_count",
+      "importance": 0.010169232205801314
+    },
+    {
+      "feature": "html.heading_h1_h2_h3_count",
+      "importance": 0.0089904682536669
+    },
+    {
+      "feature": "html.length",
+      "importance": 0.008737655845939126
+    }
+  ],
+  "top_permutation_features": [
+    {
+      "feature": "url.slash_count",
+      "importance_mean": 5.3324470867394114e-05,
+      "importance_std": 4.096726411452147e-05
+    },
+    {
+      "feature": "url.path_length",
+      "importance_mean": 3.8675953370481686e-08,
+      "importance_std": 6.11520518445243e-08
+    },
+    {
+      "feature": "url.file_extension=owaa",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "url.file_extension=asp",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "url.file_extension=wav",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "url.file_extension=054546445454",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=br",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=ashx",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=io",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=com",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=sptfy",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=jsp",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=edu",
+      "importance_mean": -1.3877787807814457e-17,
+      "importance_std": 3.671717528720129e-17
+    },
+    {
+      "feature": "url.file_extension=ca",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    },
+    {
+      "feature": "url.file_extension=cgi",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    },
+    {
+      "feature": "url.file_extension=covidapprove",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    },
+    {
+      "feature": "url.file_extension=mobi",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    },
+    {
+      "feature": "url.file_extension=mom",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    },
+    {
+      "feature": "url.file_extension=2018",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    },
+    {
+      "feature": "url.file_extension=brewery",
+      "importance_mean": -2.7755575615628914e-17,
+      "importance_std": 4.8074067159589095e-17
+    }
+  ],
+  "top_source_associated_features": [
+    {
+      "feature": "url.slash_count",
+      "label_mi": 0.684656358166183,
+      "source_mi": 0.684656358166183,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.path_length",
+      "label_mi": 0.6826132256521916,
+      "source_mi": 0.6826132256521916,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.special_character_count",
+      "label_mi": 0.6357964809265033,
+      "source_mi": 0.6357964809265033,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.token_count",
+      "label_mi": 0.5945382506072525,
+      "source_mi": 0.5945382506072525,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.requested_url_length",
+      "label_mi": 0.5890616372466544,
+      "source_mi": 0.5890616372466544,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.final_url_length",
+      "label_mi": 0.588067602109736,
+      "source_mi": 0.588067602109736,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.token_length_stddev",
+      "label_mi": 0.573290131929439,
+      "source_mi": 0.573290131929439,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.character_entropy",
+      "label_mi": 0.5708602517727135,
+      "source_mi": 0.5708602517727135,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.visible_text_length",
+      "label_mi": 0.47246653469082434,
+      "source_mi": 0.47246653469082434,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.total_tag_count",
+      "label_mi": 0.4442653340945606,
+      "source_mi": 0.4442653340945606,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.internal_anchor_count",
+      "label_mi": 0.4339875389271204,
+      "source_mi": 0.4339875389271204,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.visible_word_count",
+      "label_mi": 0.42681578861631286,
+      "source_mi": 0.42681578861631286,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.average_token_length",
+      "label_mi": 0.42046007994203816,
+      "source_mi": 0.42046007994203816,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.length",
+      "label_mi": 0.41933078459181705,
+      "source_mi": 0.41933078459181705,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.visible_text_entropy",
+      "label_mi": 0.4184621294200317,
+      "source_mi": 0.4184621294200317,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "label_mi": 0.4105287158441744,
+      "source_mi": 0.4105287158441744,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.placeholder_link_ratio",
+      "label_mi": 0.3962463396338174,
+      "source_mi": 0.3962463396338174,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "url.path_segment_count",
+      "label_mi": 0.39322996802503307,
+      "source_mi": 0.39322996802503307,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.external_anchor_ratio",
+      "label_mi": 0.3855499434806535,
+      "source_mi": 0.3855499434806535,
+      "source_to_label_mi_ratio": 1.0
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "label_mi": 0.3817435501283508,
+      "source_mi": 0.3817435501283508,
+      "source_to_label_mi_ratio": 1.0
+    }
+  ],
+  "explanations": {
+    "shap": "completed",
+    "lime": "completed",
+    "ebm": "completed"
+  }
+}

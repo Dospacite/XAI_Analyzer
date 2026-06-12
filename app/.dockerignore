@@ -1,0 +1,11 @@
+.git
+.env
+.venv
+**/__pycache__
+**/*.pyc
+**/node_modules
+frontend/dist
+adapter/*.ipynb
+final_adapter/*.ipynb
+deepseek-phishing-v3-final/*.ipynb
+

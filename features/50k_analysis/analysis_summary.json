@@ -1,0 +1,362 @@
+{
+  "input": "features/50k.jsonl",
+  "rows": 147524,
+  "feature_count": 518,
+  "model_feature_count": 517,
+  "zero_variance_feature_count": 1,
+  "zero_variance_features": [
+    "url.angle_bracket_count"
+  ],
+  "label_counts": {
+    "benign": 87924,
+    "phishing": 59600
+  },
+  "source_counts": {
+    "phishing_db.website_content": 50000,
+    "urlscan.live": 49336,
+    "tranco.websites": 48188
+  },
+  "source_label_nmi": 0.5750330199909158,
+  "random_forest": {
+    "accuracy": 0.9344517878325708,
+    "roc_auc": 0.9795497945740058,
+    "classification_report": {
+      "benign": {
+        "precision": 0.9329460580912863,
+        "recall": 0.9589422803525732,
+        "f1-score": 0.9457655636567582,
+        "support": 17585.0
+      },
+      "phishing": {
+        "precision": 0.936832895888014,
+        "recall": 0.8983221476510067,
+        "f1-score": 0.9171734475374732,
+        "support": 11920.0
+      },
+      "accuracy": 0.9344517878325708,
+      "macro avg": {
+        "precision": 0.9348894769896501,
+        "recall": 0.92863221400179,
+        "f1-score": 0.9314695055971157,
+        "support": 29505.0
+      },
+      "weighted avg": {
+        "precision": 0.9345163379264666,
+        "recall": 0.9344517878325708,
+        "f1-score": 0.9342143681257677,
+        "support": 29505.0
+      }
+    }
+  },
+  "top_random_forest_features": [
+    {
+      "feature": "html.internal_anchor_count",
+      "importance": 0.07670293734886233
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "importance": 0.04155700628548686
+    },
+    {
+      "feature": "html.external_anchor_count",
+      "importance": 0.03968810337789493
+    },
+    {
+      "feature": "html.external_anchor_ratio",
+      "importance": 0.03648333832423432
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "importance": 0.033970257530189146
+    },
+    {
+      "feature": "url.subdomain_length",
+      "importance": 0.029398302462509112
+    },
+    {
+      "feature": "html.unique_tag_count",
+      "importance": 0.02599549355903772
+    },
+    {
+      "feature": "html.meta_tag_count",
+      "importance": 0.025917021517628577
+    },
+    {
+      "feature": "html.placeholder_link_ratio",
+      "importance": 0.025767070787603336
+    },
+    {
+      "feature": "html.total_tag_count",
+      "importance": 0.025421931109005813
+    },
+    {
+      "feature": "html.visible_text_length",
+      "importance": 0.023925519649875923
+    },
+    {
+      "feature": "html.visible_word_count",
+      "importance": 0.022252481556629945
+    },
+    {
+      "feature": "url.digit_ratio",
+      "importance": 0.02084765735831813
+    },
+    {
+      "feature": "url.digit_count",
+      "importance": 0.02075236463178396
+    },
+    {
+      "feature": "html.navigation_present",
+      "importance": 0.02068218835400747
+    },
+    {
+      "feature": "html.script_tag_count",
+      "importance": 0.01998757840874624
+    },
+    {
+      "feature": "url.character_entropy",
+      "importance": 0.016364804097741957
+    },
+    {
+      "feature": "html.current_domain_token_in_title",
+      "importance": 0.01494301945797497
+    },
+    {
+      "feature": "html.list_count",
+      "importance": 0.01482934947153332
+    },
+    {
+      "feature": "html.resource_url_count",
+      "importance": 0.014507571136930372
+    }
+  ],
+  "top_permutation_features": [
+    {
+      "feature": "html.internal_anchor_count",
+      "importance_mean": 0.007734466388567118,
+      "importance_std": 0.0006014577439806561
+    },
+    {
+      "feature": "url.subdomain_length",
+      "importance_mean": 0.002506936287886452,
+      "importance_std": 0.00015792189143603365
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "importance_mean": 0.0018782655386207076,
+      "importance_std": 0.00021324204653008208
+    },
+    {
+      "feature": "html.placeholder_link_ratio",
+      "importance_mean": 0.0017168047503687278,
+      "importance_std": 0.00011466406963122941
+    },
+    {
+      "feature": "html.current_domain_token_in_title",
+      "importance_mean": 0.0014761767150160005,
+      "importance_std": 6.859859196432091e-05
+    },
+    {
+      "feature": "html.meta_tag_count",
+      "importance_mean": 0.001171584733213299,
+      "importance_std": 9.378176557935466e-05
+    },
+    {
+      "feature": "html.external_anchor_count",
+      "importance_mean": 0.0011379137859638816,
+      "importance_std": 0.00011877490386143947
+    },
+    {
+      "feature": "html.title_registered_domain_token_present",
+      "importance_mean": 0.0011296831497252524,
+      "importance_std": 4.3306989144175545e-05
+    },
+    {
+      "feature": "html.external_anchor_ratio",
+      "importance_mean": 0.0010992676033761278,
+      "importance_std": 0.00011063663277729832
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "importance_mean": 0.001038524172141772,
+      "importance_std": 9.208788552734317e-05
+    },
+    {
+      "feature": "html.title_url_token_overlap_ratio",
+      "importance_mean": 0.001037170190140685,
+      "importance_std": 5.7276448600958604e-05
+    },
+    {
+      "feature": "html.external_resource_ratio",
+      "importance_mean": 0.000923412444922389,
+      "importance_std": 3.064711373208271e-05
+    },
+    {
+      "feature": "html.script_tag_count",
+      "importance_mean": 0.0009120385190436314,
+      "importance_std": 9.487098695766276e-05
+    },
+    {
+      "feature": "url.requested_url_length",
+      "importance_mean": 0.0008893974115179171,
+      "importance_std": 4.5628956310584375e-05
+    },
+    {
+      "feature": "html.navigation_present",
+      "importance_mean": 0.000862817203305874,
+      "importance_std": 6.086251884407513e-05
+    },
+    {
+      "feature": "url.digit_count",
+      "importance_mean": 0.0008419877660376246,
+      "importance_std": 5.736905093200285e-05
+    },
+    {
+      "feature": "url.character_entropy",
+      "importance_mean": 0.0008228590804395808,
+      "importance_std": 3.6257394367247106e-05
+    },
+    {
+      "feature": "html.visible_text_length",
+      "importance_mean": 0.0008167415625542213,
+      "importance_std": 3.338643072653214e-05
+    },
+    {
+      "feature": "html.external_script_ratio",
+      "importance_mean": 0.0007921883020725606,
+      "importance_std": 1.9495278611775502e-05
+    },
+    {
+      "feature": "url.digit_ratio",
+      "importance_mean": 0.0007767229115341889,
+      "importance_std": 8.065934749195988e-05
+    }
+  ],
+  "top_source_associated_features": [
+    {
+      "feature": "html.internal_anchor_count",
+      "label_mi": 0.23875736454719343,
+      "source_mi": 0.3007755323600274,
+      "source_to_label_mi_ratio": 1.259753946984849
+    },
+    {
+      "feature": "html.visible_text_length",
+      "label_mi": 0.22678930363813699,
+      "source_mi": 0.2968554882850938,
+      "source_to_label_mi_ratio": 1.3089483653900793
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "label_mi": 0.2291881740922137,
+      "source_mi": 0.2923994891200561,
+      "source_to_label_mi_ratio": 1.2758053083594503
+    },
+    {
+      "feature": "html.length",
+      "label_mi": 0.223581985895408,
+      "source_mi": 0.28988359938960007,
+      "source_to_label_mi_ratio": 1.2965427345528993
+    },
+    {
+      "feature": "html.visible_text_entropy",
+      "label_mi": 0.22609247855229841,
+      "source_mi": 0.28979078319808704,
+      "source_to_label_mi_ratio": 1.2817356201040289
+    },
+    {
+      "feature": "html.placeholder_link_ratio",
+      "label_mi": 0.2181240094821857,
+      "source_mi": 0.28190475214975175,
+      "source_to_label_mi_ratio": 1.2924058787429133
+    },
+    {
+      "feature": "html.external_anchor_ratio",
+      "label_mi": 0.2226402361804043,
+      "source_mi": 0.27982562804530486,
+      "source_to_label_mi_ratio": 1.2568511103202546
+    },
+    {
+      "feature": "url.token_length_stddev",
+      "label_mi": 0.15229848660234047,
+      "source_mi": 0.27911409050380653,
+      "source_to_label_mi_ratio": 1.832678030692376
+    },
+    {
+      "feature": "html.visible_text_to_html_ratio",
+      "label_mi": 0.18976345558593355,
+      "source_mi": 0.2596979747634658,
+      "source_to_label_mi_ratio": 1.3685352322532023
+    },
+    {
+      "feature": "html.visible_word_count",
+      "label_mi": 0.19516689435383738,
+      "source_mi": 0.24874823365704035,
+      "source_to_label_mi_ratio": 1.2745411278926233
+    },
+    {
+      "feature": "html.total_tag_count",
+      "label_mi": 0.1965382833973388,
+      "source_mi": 0.24312442418807279,
+      "source_to_label_mi_ratio": 1.2370334165204415
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "label_mi": 0.18933262475114376,
+      "source_mi": 0.2397473621105657,
+      "source_to_label_mi_ratio": 1.2662760178056285
+    },
+    {
+      "feature": "url.character_entropy",
+      "label_mi": 0.13641752440881194,
+      "source_mi": 0.23454782839923216,
+      "source_to_label_mi_ratio": 1.7193379620080649
+    },
+    {
+      "feature": "html.external_resource_ratio",
+      "label_mi": 0.17683166496732583,
+      "source_mi": 0.23074485610686324,
+      "source_to_label_mi_ratio": 1.3048842589900358
+    },
+    {
+      "feature": "html.external_script_ratio",
+      "label_mi": 0.15640558429441387,
+      "source_mi": 0.211905440612429,
+      "source_to_label_mi_ratio": 1.3548457465146744
+    },
+    {
+      "feature": "url.path_length",
+      "label_mi": 0.04479326810327833,
+      "source_mi": 0.18355979414333223,
+      "source_to_label_mi_ratio": 4.097932611661748
+    },
+    {
+      "feature": "url.subdomain_length",
+      "label_mi": 0.13951891238031888,
+      "source_mi": 0.17790586759100968,
+      "source_to_label_mi_ratio": 1.2751380049899659
+    },
+    {
+      "feature": "html.meta_tag_count",
+      "label_mi": 0.14914507386146858,
+      "source_mi": 0.1726145852228833,
+      "source_to_label_mi_ratio": 1.1573602852160847
+    },
+    {
+      "feature": "html.div_count",
+      "label_mi": 0.14002815762156828,
+      "source_mi": 0.1715134227186208,
+      "source_to_label_mi_ratio": 1.2248495276367395
+    },
+    {
+      "feature": "html.external_anchor_count",
+      "label_mi": 0.1429041915705085,
+      "source_mi": 0.17148174906332536,
+      "source_to_label_mi_ratio": 1.1999770418120788
+    }
+  ],
+  "explanations": {
+    "shap": "completed",
+    "lime": "completed",
+    "ebm": "completed"
+  }
+}

@@ -1,0 +1,1634 @@
+{
+  "base_model_id": "Qwen/Qwen3-4B",
+  "adapter_dir": "/content/drive/MyDrive/qwen3_explainable_runs/qwen3_4b_explainable_seed42_20260607_141527/adapter",
+  "tokenizer_dir": "/content/drive/MyDrive/qwen3_explainable_runs/qwen3_4b_explainable_seed42_20260607_141527/adapter",
+  "selected_features_path": "/content/drive/MyDrive/qwen3_explainable_runs/qwen3_4b_explainable_seed42_20260609_072223/selected_features.json",
+  "feature_audit_path": "/content/drive/MyDrive/qwen3_explainable_runs/qwen3_4b_explainable_seed42_20260609_072223/feature_mi_audit.csv",
+  "selected_features": [
+    "html.internal_anchor_count",
+    "html.visible_text_length",
+    "html.external_to_internal_anchor_ratio",
+    "html.visible_text_entropy",
+    "html.length",
+    "html.external_anchor_ratio",
+    "html.placeholder_link_ratio",
+    "html.visible_word_count",
+    "html.total_tag_count",
+    "html.visible_text_to_html_ratio",
+    "html.anchors_with_href_count",
+    "html.external_resource_ratio",
+    "html.external_script_ratio",
+    "url.token_length_stddev",
+    "html.meta_tag_count",
+    "html.script_tag_count",
+    "html.resource_url_count",
+    "html.unique_tag_count",
+    "html.div_count",
+    "html.external_anchor_count",
+    "url.subdomain_length",
+    "url.character_entropy",
+    "html.span_count",
+    "url.digit_ratio",
+    "html.navigation_present",
+    "html.list_count",
+    "html.heading_h1_h2_h3_count",
+    "html.title_length",
+    "html.paragraph_count",
+    "html.external_script_count",
+    "html.inline_script_count",
+    "url.digit_count",
+    "html.external_image_ratio",
+    "url.average_token_length",
+    "html.image_count",
+    "html.unique_external_resource_domain_count",
+    "url.hostname_length",
+    "html.stylesheet_link_count",
+    "html.submit_button_count",
+    "html.favicon_count",
+    "html.iframe_count",
+    "html.title_url_token_overlap_ratio",
+    "html.external_iframe_count",
+    "html.footer_present",
+    "html.external_stylesheet_ratio",
+    "html.current_domain_token_in_title",
+    "html.title_registered_domain_token_present",
+    "url.final_url_length",
+    "html.input_count",
+    "html.form_count",
+    "html.hidden_input_ratio",
+    "url.longest_token_length",
+    "url.requested_url_length",
+    "url.hostname_digit_count",
+    "url.path_length",
+    "html.hidden_element_present",
+    "html.hidden_input_count",
+    "url.token_count",
+    "html.null_or_empty_anchor_count",
+    "html.privacy_or_terms_link_present",
+    "url.special_character_count",
+    "html.external_stylesheet_count",
+    "html.password_input_count",
+    "url.registrable_domain_length",
+    "url.scheme_is_https",
+    "html.password_form_null_action_present",
+    "html.external_image_count",
+    "html.post_form_count",
+    "url.hyphen_count",
+    "url.shortest_token_length",
+    "html.external_favicon_count",
+    "html.anchors_missing_href_count",
+    "html.text_input_count",
+    "url.path_segment_count",
+    "html.javascript_redirect_present",
+    "url.parenthesis_count",
+    "url.subdomain_label_count",
+    "url.query_length",
+    "url.slash_count",
+    "metadata.redirect_count",
+    "metadata.final_url_changed",
+    "html.null_form_action_count",
+    "html.email_input_count",
+    "html.title_subdomain_token_present",
+    "html.alert_or_popup_present",
+    "url.dot_count",
+    "metadata.final_host_changed",
+    "url.hostname_dot_count",
+    "html.credential_form_present",
+    "url.has_file_extension",
+    "html.table_count",
+    "url.at_sign_count",
+    "html.right_click_disabling_present",
+    "html.eval_call_count",
+    "metadata.final_scheme_changed",
+    "metadata.redirect_domain_change_count",
+    "html.document_write_count",
+    "html.atob_call_count",
+    "url.query_parameter_count",
+    "url.percent_sign_count",
+    "url.equals_sign_count",
+    "url.path_or_query_contains_url",
+    "url.underscore_count",
+    "html.onmouseover_handler_count",
+    "url.fragment_length",
+    "url.ampersand_count",
+    "html.password_form_external_action_present",
+    "url.registrable_domain_hyphen_count",
+    "html.external_form_action_count",
+    "html.meta_refresh_count",
+    "html.mailto_form_action_count",
+    "url.hash_sign_count",
+    "url.extra_double_slash_count",
+    "url.explicit_port_present",
+    "url.asterisk_count",
+    "url.curly_bracket_count",
+    "url.punycode_present",
+    "url.plus_sign_count",
+    "url.https_token_in_hostname",
+    "url.non_default_port_present",
+    "url.host_is_ip_address",
+    "url.question_mark_count",
+    "url.square_bracket_count",
+    "url.tilde_count"
+  ],
+  "dropped_features": [
+    "url.angle_bracket_count",
+    "url.file_extension"
+  ],
+  "known_feature_taxonomy": [
+    "brand.domain_lookalike",
+    "brand.favicon_domain_mismatch",
+    "brand.title_domain_match_strong",
+    "brand.title_domain_mismatch",
+    "contact.identity_domain_mismatch",
+    "content.coercive_urgency_near_form",
+    "content.copyright_domain_mismatch",
+    "content.file_lure_terms",
+    "content.non_credential_transactional_page",
+    "credential.credential_terms_near_form",
+    "credential.password_input_present",
+    "form.action_same_org_domain",
+    "form.blank_action_js_submission_suspected",
+    "form.empty_or_blank_action",
+    "form.external_action",
+    "form.hidden_inputs",
+    "identity.provider_expected_domain",
+    "iframe.hidden_iframe",
+    "link.brand_text_domain_mismatch",
+    "link.high_external_anchor_ratio",
+    "link.null_or_void_anchors",
+    "login.missing_recovery_or_help_flow",
+    "meta.robots_noindex_nofollow",
+    "navigation.functional_internal_links",
+    "page.generic_login_without_brand_claim",
+    "page.interstitial_without_credential_collection",
+    "page.low_semantic_content",
+    "page.rendering_incomplete_or_script_dependent",
+    "redirect.cross_domain",
+    "redirect.multi_hop",
+    "support.contact_domain_match",
+    "url.deep_subdomain",
+    "url.email_identifier",
+    "url.homograph_or_unicode_hostname",
+    "url.http_not_https",
+    "url.long_url"
+  ],
+  "phishing_threshold": 0.5,
+  "max_len": 3072,
+  "max_clean_text_chars": 5000,
+  "include_signals_in_eval_prompt": false,
+  "max_signals_in_prompt": 0,
+  "system_message": "You are a cybersecurity analyst evaluating webpages for phishing.\n\nYou will receive a webpage's URL, hostname, page title, and structured numerical feature data\ncovering URL structure, page layout, forms, links, resources, JavaScript behaviour, and redirects.\n\nAnalyze the feature values and output your assessment in this exact format:\n\nPhishing risk factors:\n- <feature_id>\n\nBenign mitigating factors:\n- <feature_id>\n\nReasoning:\n<1-3 sentences citing the feature values that drove your verdict>\n\nVerdict: phishing\n\nor\n\nPhishing risk factors:\n- <feature_id>\n\nBenign mitigating factors:\n- <feature_id>\n\nReasoning:\n<1-3 sentences citing the feature values that drove your verdict>\n\nVerdict: benign\n\nRules:\n- List only feature IDs directly supported by the feature values in the prompt.\n- If a section has no strong evidence, write `- none`.\n- Use `Phishing risk factors:` and `Benign mitigating factors:` as the exact section headers.\n- Cite specific feature values in the reasoning (e.g. \"nav=no, 1 password input, ext_ratio=80%\").\n- The verdict must be exactly `Verdict: phishing` or `Verdict: benign`.",
+  "output_format": {
+    "sections": [
+      "Phishing risk factors:",
+      "Benign mitigating factors:",
+      "Reasoning:",
+      "Verdict: phishing|benign"
+    ],
+    "empty_feature_section_value": "- none"
+  },
+  "preprocessing_notes": [
+    "Filter raw parser features to selected_features before prompt construction.",
+    "Build clean_text with URL, hostname, title, compact selected feature vector.",
+    "Do NOT include precomputed signals unless include_signals_in_eval_prompt is true.",
+    "Use tokenizer.apply_chat_template with saved system_message and /no_think user prefix.",
+    "families metadata must NOT be included — data leakage risk."
+  ],
+  "final_metrics": {
+    "model": {
+      "run_name": "tuned_no_leakage",
+      "model_variant": "tuned",
+      "base_model_id": "Qwen/Qwen3-4B",
+      "adapter_path": "/content/drive/MyDrive/qwen3_explainable_runs/qwen3_4b_explainable_seed42_20260607_141527/adapter",
+      "include_signals_in_prompt": false
+    },
+    "dataset": {
+      "split": "custom",
+      "num_examples": 7000
+    },
+    "classification": {
+      "accuracy": 0.8907142857142857,
+      "precision": 0.8771292934934376,
+      "recall": 0.9062319676860935,
+      "f1": 0.8914431673052363,
+      "confusion_matrix": [
+        [
+          3094,
+          440
+        ],
+        [
+          325,
+          3141
+        ]
+      ],
+      "support": 7000,
+      "auc_pr": null
+    },
+    "explanation": {
+      "feature_grounding": {
+        "suspicious_f1": 0.7679073633182877,
+        "benign_f1": 0.6762419501133787,
+        "combined_f1": 0.831572135731763
+      },
+      "text_quality": {
+        "rouge_l": 0.8419413571440209,
+        "bleu": 0.7460737203257446
+      },
+      "consistency": {
+        "contradiction_rate": 0.23885714285714285
+      },
+      "faithfulness": {
+        "mean_faithfulness": 0.9800466553287982
+      },
+      "taxonomy": {
+        "mean_compliance": 1.0
+      }
+    },
+    "rationale_diversity": {
+      "mean_pairwise_similarity": 0.2906845972310321,
+      "template_rate": 0.9872857142857143
+    },
+    "parse_failures": {
+      "count": 167,
+      "examples": [
+        {
+          "example_id": "69d3811c0c28a438c11847b8",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69495cf5a50c27422797c8ec",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69250e1ebc92b1949f04ebfa",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "694811b4a50c27422797c4a7",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "693c720076ba9390588091df",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "019b0920-05d7-75a9-807a-ff3f2725664e",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cefa19261193eaca68dd4a",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69ce2d1b261193eaca688419",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69ce9d44261193eaca68b9b7",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "695b98b9ba6a87a79dda2389",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "691b146fbfb39a768af90e7b",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6968973a04da27a134161941",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69bb6135a5c7d5e9b69613fd",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cda36bbc43d9c8ee6cb09b",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cc3cd5bc43d9c8ee6c98f5",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6967643204da27a134161534",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "694155fe754f982cd2b7d954",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "692ed3a1a4e8a90b2346aa96",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6928c1f05c210b46a4300e8d",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6911d3f112b7a8e079909318",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "019b08e5-ef5b-75e8-8c3f-bc59c9445578",
+          "parse_errors": [
+            "missing_verdict"
+          ]
+        },
+        {
+          "example_id": "69ae4be3449cf15ca553dc6d",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "691e3d91c1480e8a8d9950c0",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cc9c7cbc43d9c8ee6caaec",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69d2ee670c28a438c118303f",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69254b6fbc92b1949f04ecc6",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "694abfda6c33954884236680",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69226bb797ee66bf54c93901",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69127d0012b7a8e0799098a2",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69415e62754f982cd2b7d971",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6918e97bffa9556567f307f2",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6918f653ffa9556567f30832",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cec743261193eaca68c9fb",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6911d92812b7a8e079909476",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6931d5c8064a766321b54a37",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "691b2929bfb39a768af90f04",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69306e2aa4e8a90b2346aeb2",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "691f1af89a3280c26008d02d",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6943f1f6a50c27422797b8e5",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cee31a261193eaca68d519",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "6916238412b7a8e07990a885",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69a92d25449cf15ca553bbeb",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69164f1512b7a8e07990a9a5",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69a95581449cf15ca553c1b4",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "019b0795-f90f-72d8-94fd-f0a9d12e6a3b",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "692f8a8ea4e8a90b2346ad72",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69ceaf6f261193eaca68c0d2",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69329cd2064a766321b54d2d",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69cf0051bc43d9c8ee6cb3f0",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        },
+        {
+          "example_id": "69ae8bd6449cf15ca553df4a",
+          "parse_errors": [
+            "missing_structured_feature_lists"
+          ]
+        }
+      ]
+    }
+  },
+  "explanation_correctness_report": {
+    "format": {
+      "format_success_rate": 1.0,
+      "format_failure_count": 0,
+      "format_failure_examples": []
+    },
+    "taxonomy": {
+      "taxonomy_compliance_rate": 1.0,
+      "invalid_feature_example_count": 0,
+      "invalid_feature_examples": []
+    },
+    "grounding": {
+      "grounded_feature_rate_checked_only": 0.9419213822294695,
+      "grounded_feature_count": 27149,
+      "ungrounded_feature_count": 1674,
+      "unchecked_feature_count": 193,
+      "rule_error_count": 0,
+      "unchecked_feature_top": [
+        [
+          "meta.robots_noindex_nofollow",
+          107
+        ],
+        [
+          "contact.identity_domain_mismatch",
+          81
+        ],
+        [
+          "content.file_lure_terms",
+          4
+        ],
+        [
+          "identity.provider_expected_domain",
+          1
+        ]
+      ],
+      "ungrounded_example_count": 1352,
+      "ungrounded_examples": [
+        {
+          "example_id": "693b089376ba939058808d5e",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69198395ea7f274a5560713c",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b0994-6469-746e-8b29-35b166418a5a",
+          "predicted_label": "phishing",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6946fc64a50c27422797c162",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69ce8a69261193eaca68b1e3",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "693621cb085a25672199722c",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b094b-038d-700a-b0a4-7beee7885447",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b086f-4a2b-769f-bc79-19e910e050ea",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69445b25a50c27422797ba5a",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "link.brand_text_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019d6232-a8f5-7309-966d-80e803f3da3b",
+          "predicted_label": "phishing",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "page.generic_login_without_brand_claim"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b0969-1c9b-74a3-b860-2e70dc016583",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69d315600c28a438c118386b",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b09e4-93f7-70c6-aa90-1556e13d56a5",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69ce224c261193eaca687c9a",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "699c06991a95f1ab4f2e8d78",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b0a56-4e74-734d-803d-64f41377823b",
+          "predicted_label": "phishing",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "692b92194325b40e64e3abd9",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "content.copyright_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6935f05c085a256721997199",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69cef521261193eaca68db51",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69d103d0bc43d9c8ee6cb7e3",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "691d1191bea42051e4191a0e",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69673c1404da27a1341611d7",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "691d8675bea42051e4191bc0",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "navigation.functional_internal_links"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69ce5870261193eaca689bc5",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69cc2782bc43d9c8ee6c9459",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "691ed1e32d7df2401d5b05b9",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6911dba212b7a8e07990950b",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b0609-2666-73a8-be57-34dace3b7f3e",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69274b0e5c210b46a43009a0",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69d317130c28a438c11838c5",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "link.brand_text_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019d623a-62ba-713b-8260-2f782ad53d2c",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "692932075c210b46a4300fbf",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": [
+            "meta.robots_noindex_nofollow"
+          ]
+        },
+        {
+          "example_id": "69d3d226bc43d9c8ee6cbeb1",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69cde28f261193eaca684f00",
+          "predicted_label": "phishing",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6939223a8836a0dc4e2c597c",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "link.brand_text_domain_mismatch",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69be068cb6277ba73b056651",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "691fcdf7ee8f07abbf9f2c6b",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": [
+            "contact.identity_domain_mismatch"
+          ]
+        },
+        {
+          "example_id": "692ea56ea4e8a90b2346aa2a",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "content.copyright_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6913df4512b7a8e079909f3f",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "support.contact_domain_match"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b07a1-0e5b-744b-ade3-8b3f28bbef44",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6935f099085a2567219971ae",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "691bb43cbfb39a768af91321",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69cdf75abc43d9c8ee6cb192",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "691998a8ea7f274a556071ac",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "login.missing_recovery_or_help_flow"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "019b0a27-311c-73db-bddb-ae774ad4871e",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "ungrounded_features": [
+            "brand.title_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "6935fd89085a2567219971f5",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "693540d1085a256721997017",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "credential.credential_terms_near_form",
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "699d86d81a95f1ab4f2e90e8",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "page.low_semantic_content"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69beae3bb6277ba73b05675e",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "brand.favicon_domain_mismatch"
+          ],
+          "unchecked_features": []
+        },
+        {
+          "example_id": "69222947ee8f07abbf9f358c",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "ungrounded_features": [
+            "url.deep_subdomain"
+          ],
+          "unchecked_features": []
+        }
+      ]
+    },
+    "weighted_consistency": {
+      "consistency_rate": 0.8851428571428571,
+      "failure_count": 804,
+      "failure_examples": [
+        {
+          "example_id": "691e0eb5c1480e8a8d99501d",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "risk_score": 0,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0985-5844-743b-982a-e9f6968bffc8",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 1,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019d6251-6870-711d-90e7-34beefd9c0e2",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69eade16e21ce4f3efb804c6",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69ce8a69261193eaca68b1e3",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0605-6500-74d8-b514-663c30319751",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0a26-bfac-72ef-a353-15d1fb663785",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 6,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0953-1ca7-77a0-8b0d-52bb6eba9266",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0969-1c9b-74a3-b860-2e70dc016583",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 5,
+          "benign_score": 1,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0ad4-94ff-7598-98a3-da04f95a5ac8",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 11,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b060d-c236-732f-b6cf-7cbe171f38d5",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 5,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69cef521261193eaca68db51",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 6,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "6915fa4512b7a8e07990a7ac",
+          "predicted_label": "benign",
+          "ground_truth_label": "phishing",
+          "risk_score": 6,
+          "benign_score": 0,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69ce5870261193eaca689bc5",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019d624f-61ac-763e-a874-344264c60e30",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 6,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0a51-c1da-7765-bcd9-ed3c1667e31e",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 10,
+          "benign_score": 6,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0af1-526f-76c2-b009-c2fcf4a1754d",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 10,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b07ae-9011-774e-9f81-82e225cc8d5e",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 5,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019d623a-62ba-713b-8260-2f782ad53d2c",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0835-70b0-77a2-8f79-17e5e0b742eb",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 10,
+          "benign_score": 4,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0653-0922-7093-aa04-42077e2affa8",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69d351b40c28a438c11842f3",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 0,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b081e-828e-771c-806d-9e898bbd2645",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b069e-fc75-70fc-91cb-b30e9fce4c63",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0855-f362-749e-95f2-56674d345428",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019d623a-9e63-760f-a952-07b24c9a8a06",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 10,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69c1436c3a3e28dfffa95dda",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "risk_score": 0,
+          "benign_score": 4,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0a27-311c-73db-bddb-ae774ad4871e",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 5,
+          "benign_score": 1,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b06de-9a45-769b-927b-b2b340a66221",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0607-4c26-704f-8f24-b4cf109e0e07",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69d31f7a0c28a438c1183a89",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 8,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019d6229-ffa0-74e9-8bae-6a607397217e",
+          "predicted_label": "benign",
+          "ground_truth_label": "phishing",
+          "risk_score": 8,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "691ceefebea42051e41918db",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "risk_score": 0,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b082f-0e72-7706-8e28-33a935b480d6",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "risk_score": 0,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69d48ec20c28a438c1197e8f",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 10,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0a29-7d34-74f6-b0b9-4f4bc80861a4",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 6,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b073b-32c9-70da-8e59-6716f96c538e",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 12,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b08f9-5243-7302-9ca5-e6598a06cc0e",
+          "predicted_label": "benign",
+          "ground_truth_label": "phishing",
+          "risk_score": 11,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69cea031261193eaca68baf3",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 7,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0723-ce2b-7583-8cc6-71248debb546",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b07ec-d20d-76d8-b6a8-bd600422c262",
+          "predicted_label": "phishing",
+          "ground_truth_label": "benign",
+          "risk_score": 0,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69ce7f85261193eaca68ad36",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 7,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b09d9-8785-77fe-819f-db5ac215d36f",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0772-ed6f-75a2-944b-d85d9fb5ec1a",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "risk_score": 0,
+          "benign_score": 1,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0ac6-5529-70a8-8cd1-4c6a0ee81cf6",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69ceb8f5261193eaca68c4c8",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 7,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0a8b-8f6b-75ce-8bb6-a15fa1f5694b",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 9,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "019b0aaa-5f07-7477-84a8-150d68073990",
+          "predicted_label": "benign",
+          "ground_truth_label": "phishing",
+          "risk_score": 9,
+          "benign_score": 2,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "69ceed2f261193eaca68d8a5",
+          "predicted_label": "benign",
+          "ground_truth_label": "benign",
+          "risk_score": 10,
+          "benign_score": 3,
+          "consistent": false,
+          "reasons": [
+            "benign_despite_stronger_weighted_risk_evidence"
+          ]
+        },
+        {
+          "example_id": "6926bc3abc92b1949f04efde",
+          "predicted_label": "phishing",
+          "ground_truth_label": "phishing",
+          "risk_score": 0,
+          "benign_score": 5,
+          "consistent": false,
+          "reasons": [
+            "phishing_without_weighted_risk_evidence"
+          ]
+        }
+      ]
+    },
+    "human_review_recommendation": {
+      "sample_size": 100,
+      "use_file": "/content/drive/MyDrive/qwen3_explainable_runs/qwen3_4b_explainable_seed42_20260607_141527/gold_test_candidates.jsonl",
+      "fields_to_score": [
+        "label_correct",
+        "features_supported",
+        "rationale_quality",
+        "verdict_matches_reasoning",
+        "missing_important_evidence"
+      ]
+    }
+  }
+}

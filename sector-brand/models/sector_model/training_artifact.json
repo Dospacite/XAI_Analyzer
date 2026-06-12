@@ -1,0 +1,183 @@
+{
+  "target": "sector",
+  "base_model": "answerdotai/ModernBERT-base",
+  "num_labels": 17,
+  "label2id": {
+    "unidentified": 0,
+    "Cryptocurrency": 1,
+    "Email Provider": 2,
+    "Energy": 3,
+    "Financial": 4,
+    "Gambling": 5,
+    "Gaming": 6,
+    "Government": 7,
+    "Insurance": 8,
+    "Logistics & Couriers": 9,
+    "Online/Cloud Service": 10,
+    "Payment Service": 11,
+    "Retail/Service": 12,
+    "Social Networking": 13,
+    "Telecommunications": 14,
+    "Transportation": 15,
+    "e-Commerce": 16
+  },
+  "id2label": {
+    "0": "unidentified",
+    "1": "Cryptocurrency",
+    "2": "Email Provider",
+    "3": "Energy",
+    "4": "Financial",
+    "5": "Gambling",
+    "6": "Gaming",
+    "7": "Government",
+    "8": "Insurance",
+    "9": "Logistics & Couriers",
+    "10": "Online/Cloud Service",
+    "11": "Payment Service",
+    "12": "Retail/Service",
+    "13": "Social Networking",
+    "14": "Telecommunications",
+    "15": "Transportation",
+    "16": "e-Commerce"
+  },
+  "train_rows": 60106,
+  "validation_rows": 12880,
+  "test_rows": 12880,
+  "validation_metrics": {
+    "validation_loss": 0.31929728388786316,
+    "validation_accuracy": 0.9062111801242236,
+    "validation_macro_f1": 0.7901439698723702,
+    "validation_weighted_f1": 0.905529604697796,
+    "validation_runtime": 319.7246,
+    "validation_samples_per_second": 40.285,
+    "validation_steps_per_second": 5.036,
+    "epoch": 2.0
+  },
+  "test_metrics": {
+    "test_loss": 0.3239252269268036,
+    "test_accuracy": 0.9002329192546584,
+    "test_macro_f1": 0.8380107514774042,
+    "test_weighted_f1": 0.8997407284635739,
+    "test_runtime": 316.6687,
+    "test_samples_per_second": 40.673,
+    "test_steps_per_second": 5.084,
+    "epoch": 2.0
+  },
+  "classification_report": {
+    "unidentified": {
+      "precision": 0.8923891831614162,
+      "recall": 0.8329430132708822,
+      "f1-score": 0.8616419919246299,
+      "support": 3843.0
+    },
+    "Cryptocurrency": {
+      "precision": 0.9292307692307692,
+      "recall": 0.9607635206786851,
+      "f1-score": 0.9447340980187695,
+      "support": 943.0
+    },
+    "Email Provider": {
+      "precision": 0.762962962962963,
+      "recall": 0.807843137254902,
+      "f1-score": 0.7847619047619048,
+      "support": 255.0
+    },
+    "Energy": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1-score": 0.6666666666666666,
+      "support": 2.0
+    },
+    "Financial": {
+      "precision": 0.9045643153526971,
+      "recall": 0.9217758985200846,
+      "f1-score": 0.9130890052356021,
+      "support": 1419.0
+    },
+    "Gambling": {
+      "precision": 0.9757709251101322,
+      "recall": 0.9910514541387024,
+      "f1-score": 0.9833518312985572,
+      "support": 447.0
+    },
+    "Gaming": {
+      "precision": 0.9395973154362416,
+      "recall": 0.9893992932862191,
+      "f1-score": 0.963855421686747,
+      "support": 849.0
+    },
+    "Government": {
+      "precision": 0.9453551912568307,
+      "recall": 0.9251336898395722,
+      "f1-score": 0.9351351351351351,
+      "support": 187.0
+    },
+    "Insurance": {
+      "precision": 0.6363636363636364,
+      "recall": 0.7,
+      "f1-score": 0.6666666666666666,
+      "support": 10.0
+    },
+    "Logistics & Couriers": {
+      "precision": 0.8024691358024691,
+      "recall": 0.8863636363636364,
+      "f1-score": 0.8423326133909287,
+      "support": 220.0
+    },
+    "Online/Cloud Service": {
+      "precision": 0.9042316258351893,
+      "recall": 0.9046345811051694,
+      "f1-score": 0.9044330585876588,
+      "support": 2244.0
+    },
+    "Payment Service": {
+      "precision": 0.65,
+      "recall": 0.7027027027027027,
+      "f1-score": 0.6753246753246753,
+      "support": 37.0
+    },
+    "Retail/Service": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1-score": 0.5,
+      "support": 6.0
+    },
+    "Social Networking": {
+      "precision": 0.8672787979966611,
+      "recall": 0.9436875567665758,
+      "f1-score": 0.903871248368856,
+      "support": 1101.0
+    },
+    "Telecommunications": {
+      "precision": 0.8743243243243243,
+      "recall": 0.9048951048951049,
+      "f1-score": 0.8893470790378006,
+      "support": 715.0
+    },
+    "Transportation": {
+      "precision": 0.9444444444444444,
+      "recall": 0.7727272727272727,
+      "f1-score": 0.85,
+      "support": 22.0
+    },
+    "e-Commerce": {
+      "precision": 0.9668411867364747,
+      "recall": 0.9551724137931035,
+      "f1-score": 0.9609713790112749,
+      "support": 580.0
+    },
+    "accuracy": 0.9002329192546584,
+    "macro avg": {
+      "precision": 0.8821072831773088,
+      "recall": 0.8254368593338792,
+      "f1-score": 0.8380107514774042,
+      "support": 12880.0
+    },
+    "weighted avg": {
+      "precision": 0.9006313540058299,
+      "recall": 0.9002329192546584,
+      "f1-score": 0.8997407284635739,
+      "support": 12880.0
+    }
+  }
+}

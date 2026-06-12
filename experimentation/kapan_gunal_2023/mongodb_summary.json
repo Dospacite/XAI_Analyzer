@@ -1,0 +1,19 @@
+{
+  "rows": 177377,
+  "train_rows": 124164,
+  "test_rows": 53213,
+  "label_counts": {
+    "phishing": 70579,
+    "benign": 106798
+  },
+  "source_counts": {
+    "phishing_db.website_content": 66568,
+    "tranco.websites": 48278,
+    "urlscan.live": 62531
+  },
+  "outputs": {
+    "full": "/home/ege/Documents/Projects/XAI_Analyzer/experimentation/kapan_gunal_2023/mongodb_full.csv",
+    "train": "/home/ege/Documents/Projects/XAI_Analyzer/experimentation/kapan_gunal_2023/mongodb_train.csv",
+    "test": "/home/ege/Documents/Projects/XAI_Analyzer/experimentation/kapan_gunal_2023/mongodb_test.csv"
+  }
+}

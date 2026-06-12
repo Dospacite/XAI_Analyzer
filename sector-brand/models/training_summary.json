@@ -1,0 +1,28 @@
+{
+  "sector": {
+    "model_dir": "/home/ege/Documents/Projects/XAI_Analyzer/sector-brand/models/sector_model",
+    "test_metrics": {
+      "test_loss": 0.3239252269268036,
+      "test_accuracy": 0.9002329192546584,
+      "test_macro_f1": 0.8380107514774042,
+      "test_weighted_f1": 0.8997407284635739,
+      "test_runtime": 316.6687,
+      "test_samples_per_second": 40.673,
+      "test_steps_per_second": 5.084,
+      "epoch": 2.0
+    }
+  },
+  "brand": {
+    "model_dir": "/home/ege/Documents/Projects/XAI_Analyzer/sector-brand/models/brand_model",
+    "test_metrics": {
+      "test_loss": 1.0840562582015991,
+      "test_accuracy": 0.8609472049689441,
+      "test_macro_f1": 0.568820422086212,
+      "test_weighted_f1": 0.8589355838733004,
+      "test_runtime": 320.8277,
+      "test_samples_per_second": 40.146,
+      "test_steps_per_second": 5.018,
+      "epoch": 2.0
+    }
+  }
+}

@@ -1,0 +1,95 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python environments and caches
+.venv/
+**/.venv/
+venv/
+env/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Node/Vite/frontend build output
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+*.tsbuildinfo
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# ML caches and experiment trackers
+unsloth_compiled_cache/
+wandb/
+mlruns/
+
+# Generated datasets and raw exports
+*.arrow
+*.csv
+*.jsonl
+*.parquet
+*.pickle
+*.pkl
+*.arff
+*.zip
+**/benign_sample_30k/
+**/phish_sample_30k/
+**/phishing_dataset-main/
+
+# Model weights, checkpoints, and training artifacts
+*.bin
+*.ckpt
+*.gguf
+*.joblib
+*.onnx
+*.pt
+*.pth
+*.safetensors
+checkpoints/
+**/checkpoint-*/
+**/checkpoints/
+**/brand_checkpoints/
+**/sector_checkpoints/
+
+# Project-generated outputs
+runs/
+**/runs/
+hf_phishing_dataset/

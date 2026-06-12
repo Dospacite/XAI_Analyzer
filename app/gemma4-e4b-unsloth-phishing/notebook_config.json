@@ -1,0 +1,14 @@
+{
+  "model_id": "google/gemma-4-E4B-it",
+  "max_seq_length": 4096,
+  "per_device_train_batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "lora_r": 32,
+  "lora_alpha": 32,
+  "warmup_steps": 100,
+  "load_in_4bit": false,
+  "load_in_16bit": true,
+  "response_only_loss": true,
+  "hf_dataset_repo_id": "Dospacite/gemma4-phishing-xai",
+  "hf_dataset_revision": null
+}

@@ -1,0 +1,112 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - app_net
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+
+  api:
+    build:
+      context: ./services/api
+    env_file:
+      - .env
+    environment:
+      SCRAPER_URL: http://scraper:8081
+      SCRAPER_TOKEN: ${SCRAPER_TOKEN:-local-development-token}
+      SQLITE_PATH: ${SQLITE_PATH:-/data/traceguard.sqlite3}
+      HF_TOKEN: ${HF_TOKEN:-}
+      HF_QWEN_REPO_ID: ${HF_QWEN_REPO_ID:-Dospacite/xai-phishing-qwen3-4b-merged}
+      HF_LLAMA_REPO_ID: ${HF_LLAMA_REPO_ID:-Dospacite/xai-phishing-llama-3.1-8b-merged}
+      HF_DEEPSEEK_REPO_ID: ${HF_DEEPSEEK_REPO_ID:-Dospacite/xai-phishing-deepseek-r1-qwen-7b-merged}
+      HF_GEMMA_REPO_ID: ${HF_GEMMA_REPO_ID:-Dospacite/gemma4-e4b-unsloth-phishing-merged}
+      HF_QWEN_ENDPOINT_URL: ${HF_QWEN_ENDPOINT_URL:-}
+      HF_LLAMA_ENDPOINT_URL: ${HF_LLAMA_ENDPOINT_URL:-}
+      HF_DEEPSEEK_ENDPOINT_URL: ${HF_DEEPSEEK_ENDPOINT_URL:-}
+      HF_GEMMA_ENDPOINT_URL: ${HF_GEMMA_ENDPOINT_URL:-}
+      HF_ENDPOINT_NAMESPACE: ${HF_ENDPOINT_NAMESPACE:-Dospacite}
+      HF_MANAGE_ENDPOINT_LIFECYCLE: ${HF_MANAGE_ENDPOINT_LIFECYCLE:-true}
+      HF_ENDPOINT_START_TIMEOUT_SECONDS: ${HF_ENDPOINT_START_TIMEOUT_SECONDS:-900}
+      HF_ENDPOINT_POLL_SECONDS: ${HF_ENDPOINT_POLL_SECONDS:-10}
+      HF_QWEN_ENDPOINT_NAME: ${HF_QWEN_ENDPOINT_NAME:-traceguard-qwen3-4b}
+      HF_LLAMA_ENDPOINT_NAME: ${HF_LLAMA_ENDPOINT_NAME:-traceguard-llama-3-1-8b}
+      HF_DEEPSEEK_ENDPOINT_NAME: ${HF_DEEPSEEK_ENDPOINT_NAME:-traceguard-deepseek-r1-qwen-7b}
+      HF_GEMMA_ENDPOINT_NAME: ${HF_GEMMA_ENDPOINT_NAME:-traceguard-gemma4-e4b}
+      QWEN_API_KEY: ${QWEN_API_KEY:-}
+      QWEN_BASE_URL: ${QWEN_BASE_URL:-}
+      QWEN_MODEL: ${QWEN_MODEL:-qwen3.5-flash}
+    expose:
+      - "8080"
+    depends_on:
+      scraper:
+        condition: service_healthy
+    networks:
+      - app_net
+      - scraper_net
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - traceguard_data:/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  scraper:
+    build:
+      context: ./services/scraper
+    environment:
+      SCRAPER_TOKEN: ${SCRAPER_TOKEN:-local-development-token}
+      SCRAPER_MAX_BYTES: ${SCRAPER_MAX_BYTES:-5000000}
+      SCRAPER_TIMEOUT_SECONDS: ${SCRAPER_TIMEOUT_SECONDS:-30}
+    expose:
+      - "8081"
+    networks:
+      - scraper_net
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 512
+    mem_limit: 2g
+    cpus: 1.5
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+networks:
+  app_net:
+  scraper_net:
+
+volumes:
+  traceguard_data:

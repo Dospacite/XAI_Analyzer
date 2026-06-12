@@ -1,0 +1,16 @@
+{
+  "rows": 177377,
+  "label_counts": {
+    "phishing": 70579,
+    "benign": 106798
+  },
+  "source_counts": {
+    "phishing_db.website_content": 66568,
+    "tranco.websites": 48278,
+    "urlscan.live": 62531
+  },
+  "outputs": {
+    "csv": "/home/ege/Documents/Projects/XAI_Analyzer/experimentation/enlem_hlaing_2025_2026/mongodb_phishing_websites.csv",
+    "arff": "/home/ege/Documents/Projects/XAI_Analyzer/experimentation/enlem_hlaing_2025_2026/mongodb_phishing_websites.arff"
+  }
+}

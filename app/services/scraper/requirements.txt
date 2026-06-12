@@ -1,0 +1,5 @@
+fastapi==0.115.12
+pydantic-settings==2.9.1
+scrapling[fetchers]==0.4.9
+uvicorn[standard]==0.34.3
+

@@ -1,0 +1,364 @@
+{
+  "input": "smoke_10k.jsonl",
+  "rows": 30000,
+  "feature_count": 135,
+  "model_feature_count": 132,
+  "zero_variance_feature_count": 3,
+  "zero_variance_features": [
+    "domain.localhost_like_host",
+    "metadata.html_available",
+    "url.angle_bracket_count"
+  ],
+  "label_counts": {
+    "benign": 18192,
+    "phishing": 11808
+  },
+  "source_counts": {
+    "phishing_db.website_content": 10000,
+    "tranco.websites": 10000,
+    "urlscan.live": 10000
+  },
+  "source_label_nmi": 0.5797770310372241,
+  "random_forest": {
+    "accuracy": 0.941,
+    "roc_auc": 0.9798787518520984,
+    "classification_report": {
+      "benign": {
+        "precision": 0.9325605900948367,
+        "recall": 0.9730621220450797,
+        "f1-score": 0.9523809523809523,
+        "support": 3638.0
+      },
+      "phishing": {
+        "precision": 0.9555353901996371,
+        "recall": 0.8916172734970365,
+        "f1-score": 0.9224704336399474,
+        "support": 2362.0
+      },
+      "accuracy": 0.941,
+      "macro avg": {
+        "precision": 0.944047990147237,
+        "recall": 0.9323396977710581,
+        "f1-score": 0.9374256930104499,
+        "support": 6000.0
+      },
+      "weighted avg": {
+        "precision": 0.9416050030694264,
+        "recall": 0.941,
+        "f1-score": 0.94060617816991,
+        "support": 6000.0
+      }
+    }
+  },
+  "top_random_forest_features": [
+    {
+      "feature": "html.internal_anchor_count",
+      "importance": 0.07327351564469071
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "importance": 0.05835129149050702
+    },
+    {
+      "feature": "html.anchor_count",
+      "importance": 0.03605798873390329
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "importance": 0.03603880520646438
+    },
+    {
+      "feature": "html.external_anchor_ratio",
+      "importance": 0.03406438480269899
+    },
+    {
+      "feature": "html.visible_text_length",
+      "importance": 0.033015130607583106
+    },
+    {
+      "feature": "html.visible_word_count",
+      "importance": 0.032108818867104
+    },
+    {
+      "feature": "url.subdomain_length",
+      "importance": 0.031801983415169176
+    },
+    {
+      "feature": "html.external_anchor_count",
+      "importance": 0.03082598792944527
+    },
+    {
+      "feature": "html.total_tag_count",
+      "importance": 0.030348534888406265
+    },
+    {
+      "feature": "domain.subdomain_entropy",
+      "importance": 0.020360020146079495
+    },
+    {
+      "feature": "html.unique_tag_count",
+      "importance": 0.020088583255567772
+    },
+    {
+      "feature": "html.compression_ratio",
+      "importance": 0.019944300295775513
+    },
+    {
+      "feature": "html.navigation_present",
+      "importance": 0.019355266843559978
+    },
+    {
+      "feature": "html.heading_h1_h2_h3_count",
+      "importance": 0.018530532666727384
+    },
+    {
+      "feature": "html.span_count",
+      "importance": 0.017944165672499287
+    },
+    {
+      "feature": "html.compressed_length",
+      "importance": 0.016134623037051512
+    },
+    {
+      "feature": "html.meta_tag_count",
+      "importance": 0.015719756303918347
+    },
+    {
+      "feature": "html.title_length",
+      "importance": 0.01530015376598115
+    },
+    {
+      "feature": "url.digit_ratio",
+      "importance": 0.014791634779606768
+    }
+  ],
+  "top_permutation_features": [
+    {
+      "feature": "html.internal_anchor_count",
+      "importance_mean": 0.015483437829775931,
+      "importance_std": 0.0006216002228827966
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "importance_mean": 0.004056112937154563,
+      "importance_std": 0.00036647360182752816
+    },
+    {
+      "feature": "html.anchor_count",
+      "importance_mean": 0.0020711004455276766,
+      "importance_std": 0.00029864388796072363
+    },
+    {
+      "feature": "url.subdomain_length",
+      "importance_mean": 0.0020493529816747597,
+      "importance_std": 0.00021758015749505485
+    },
+    {
+      "feature": "domain.subdomain_entropy",
+      "importance_mean": 0.0016506397798382588,
+      "importance_std": 0.00020288670172489512
+    },
+    {
+      "feature": "html.current_domain_token_in_title",
+      "importance_mean": 0.0015633008012608807,
+      "importance_std": 6.157700726555796e-05
+    },
+    {
+      "feature": "url.scheme_is_http",
+      "importance_mean": 0.0015298140709668756,
+      "importance_std": 0.0001896509187339313
+    },
+    {
+      "feature": "html.visible_word_count",
+      "importance_mean": 0.0013732905184199867,
+      "importance_std": 0.00024016193255423738
+    },
+    {
+      "feature": "header.status_is_2xx",
+      "importance_mean": 0.0012907519833687264,
+      "importance_std": 0.0002615368031875346
+    },
+    {
+      "feature": "html.visible_text_length",
+      "importance_mean": 0.001138752485175032,
+      "importance_std": 0.00029823261472746435
+    },
+    {
+      "feature": "url.scheme_is_https",
+      "importance_mean": 0.0011035928730462191,
+      "importance_std": 0.0001868027572286918
+    },
+    {
+      "feature": "html.total_tag_count",
+      "importance_mean": 0.0009576884834508748,
+      "importance_std": 0.00027404548184738236
+    },
+    {
+      "feature": "domain.www_prefix_present",
+      "importance_mean": 0.0009453818918658402,
+      "importance_std": 0.00013072940303909749
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "importance_mean": 0.0007949243543199369,
+      "importance_std": 0.00017193407872731885
+    },
+    {
+      "feature": "html.script_tag_count",
+      "importance_mean": 0.0007309620810347084,
+      "importance_std": 0.00015968329686324954
+    },
+    {
+      "feature": "html.null_or_empty_anchor_count",
+      "importance_mean": 0.0007146260262476112,
+      "importance_std": 0.00015082591887056811
+    },
+    {
+      "feature": "html.meta_tag_count",
+      "importance_mean": 0.0006992500601656071,
+      "importance_std": 0.0002234964521489171
+    },
+    {
+      "feature": "html.navigation_present",
+      "importance_mean": 0.0006817793550903672,
+      "importance_std": 0.0001111973572079172
+    },
+    {
+      "feature": "header.http_status_code",
+      "importance_mean": 0.0006672034629294082,
+      "importance_std": 0.00012750986137125388
+    },
+    {
+      "feature": "html.compression_ratio",
+      "importance_mean": 0.0006487581223504624,
+      "importance_std": 0.0001882971298094768
+    }
+  ],
+  "top_source_associated_features": [
+    {
+      "feature": "html.length",
+      "label_mi": 0.2888611178804068,
+      "source_mi": 0.3817175843615632,
+      "source_to_label_mi_ratio": 1.3214571319342485
+    },
+    {
+      "feature": "html.visible_text_length",
+      "label_mi": 0.28091398255007816,
+      "source_mi": 0.3743744759519587,
+      "source_to_label_mi_ratio": 1.3327014645318322
+    },
+    {
+      "feature": "html.compressed_length",
+      "label_mi": 0.2764181993735644,
+      "source_mi": 0.37076731559563125,
+      "source_to_label_mi_ratio": 1.3413274394952523
+    },
+    {
+      "feature": "html.visible_text_to_html_ratio",
+      "label_mi": 0.26098598339085854,
+      "source_mi": 0.35114955210729115,
+      "source_to_label_mi_ratio": 1.3454728393647164
+    },
+    {
+      "feature": "html.compression_ratio",
+      "label_mi": 0.25805188083443986,
+      "source_mi": 0.33979622605169313,
+      "source_to_label_mi_ratio": 1.3167748475729908
+    },
+    {
+      "feature": "html.visible_word_count",
+      "label_mi": 0.2556917069805842,
+      "source_mi": 0.3371382599221755,
+      "source_to_label_mi_ratio": 1.3185341984821428
+    },
+    {
+      "feature": "html.total_tag_count",
+      "label_mi": 0.25151611966264853,
+      "source_mi": 0.33478915126591247,
+      "source_to_label_mi_ratio": 1.3310842729084549
+    },
+    {
+      "feature": "html.internal_anchor_count",
+      "label_mi": 0.2346427614872264,
+      "source_mi": 0.3058602572639031,
+      "source_to_label_mi_ratio": 1.303514565398403
+    },
+    {
+      "feature": "html.external_to_internal_anchor_ratio",
+      "label_mi": 0.21676054538785494,
+      "source_mi": 0.2855113168044203,
+      "source_to_label_mi_ratio": 1.3171738255850387
+    },
+    {
+      "feature": "html.external_anchor_ratio",
+      "label_mi": 0.20968975791538358,
+      "source_mi": 0.27258165914883237,
+      "source_to_label_mi_ratio": 1.2999283410820077
+    },
+    {
+      "feature": "html.anchors_with_href_count",
+      "label_mi": 0.19551896421958648,
+      "source_mi": 0.2696467971307064,
+      "source_to_label_mi_ratio": 1.3791337234574712
+    },
+    {
+      "feature": "url.token_length_stddev",
+      "label_mi": 0.1517004769769088,
+      "source_mi": 0.2690978554666381,
+      "source_to_label_mi_ratio": 1.7738761329511115
+    },
+    {
+      "feature": "html.anchor_count",
+      "label_mi": 0.1894841465708894,
+      "source_mi": 0.25480507591425594,
+      "source_to_label_mi_ratio": 1.3447303139892435
+    },
+    {
+      "feature": "html.external_resource_ratio",
+      "label_mi": 0.1811204904716206,
+      "source_mi": 0.25461736537159285,
+      "source_to_label_mi_ratio": 1.4057899507040499
+    },
+    {
+      "feature": "html.div_count",
+      "label_mi": 0.172245669021577,
+      "source_mi": 0.23941167812037256,
+      "source_to_label_mi_ratio": 1.3899430939560038
+    },
+    {
+      "feature": "html.unique_tag_count",
+      "label_mi": 0.17506877274643884,
+      "source_mi": 0.23066612574892464,
+      "source_to_label_mi_ratio": 1.317574357381315
+    },
+    {
+      "feature": "html.script_tag_count",
+      "label_mi": 0.1561646763507587,
+      "source_mi": 0.20866127640631005,
+      "source_to_label_mi_ratio": 1.3361618086899476
+    },
+    {
+      "feature": "html.resource_url_count",
+      "label_mi": 0.1544572058910032,
+      "source_mi": 0.20452013970366445,
+      "source_to_label_mi_ratio": 1.3241217107603869
+    },
+    {
+      "feature": "url.subdomain_length",
+      "label_mi": 0.16674583581470448,
+      "source_mi": 0.20436544559102465,
+      "source_to_label_mi_ratio": 1.2256104903160807
+    },
+    {
+      "feature": "url.character_entropy",
+      "label_mi": 0.11612951358437562,
+      "source_mi": 0.20180126966227396,
+      "source_to_label_mi_ratio": 1.7377259529779419
+    }
+  ],
+  "explanations": {
+    "shap": "completed",
+    "lime": "completed",
+    "ebm": "completed"
+  }
+}
