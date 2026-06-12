@@ -55,19 +55,29 @@ Minimum steps to run the application locally:
    URL analysis can start without those values, but follow-up messages will not
    work until they are configured.
 
-4. Build and start the containers:
+4. If the Hugging Face endpoints do not exist yet, create them from `.env`:
+
+   ```bash
+   python3 -m pip install "huggingface_hub>=0.19.0"
+   python3 scripts/setup_hf_endpoints.py --wait --yes
+   ```
+
+   This creates billable dedicated endpoints and writes the generated
+   `HF_*_ENDPOINT_URL` values back into `.env`.
+
+5. Build and start the containers:
 
    ```bash
    docker compose up --build
    ```
 
-5. Open the app:
+6. Open the app:
 
    ```text
    http://localhost:3000
    ```
 
-6. Optional health check:
+7. Optional health check:
 
    ```bash
    curl http://localhost:3000/api/health
@@ -267,6 +277,36 @@ Endpoint setup:
 
 Endpoint hosting is billable. This repository does not create endpoints
 automatically.
+
+You can create the four endpoints from `.env` with the helper script:
+
+```bash
+python3 -m pip install "huggingface_hub>=0.19.0"
+python3 scripts/setup_hf_endpoints.py --wait
+```
+
+The script reads `HF_TOKEN`, `HF_ENDPOINT_NAMESPACE`, model repository IDs, and
+endpoint names from `.env`. It creates only missing endpoints, leaves existing
+endpoints in place, and writes any available endpoint URLs back into `.env`.
+
+Use `--dry-run` to preview the endpoint plan without creating anything:
+
+```bash
+python3 scripts/setup_hf_endpoints.py --dry-run
+```
+
+Endpoint creation settings default to AWS `us-east-1`, protected endpoints,
+PyTorch, `text-generation`, one replica, and these GPUs:
+
+- Qwen: `nvidia-l4` `x1`
+- Llama: `nvidia-l40s` `x1`
+- DeepSeek: `nvidia-l4` `x1`
+- Gemma: `nvidia-l40s` `x1`
+
+Override the shared settings with variables such as `HF_ENDPOINT_VENDOR`,
+`HF_ENDPOINT_REGION`, `HF_ENDPOINT_INSTANCE_TYPE`, and
+`HF_ENDPOINT_INSTANCE_SIZE`. Override a single model with variables such as
+`HF_QWEN_ENDPOINT_INSTANCE_TYPE` or `HF_GEMMA_ENDPOINT_INSTANCE_SIZE`.
 
 ## Run With Docker Compose
 
