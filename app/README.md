@@ -19,6 +19,66 @@ Endpoints from the same model artifacts. The application still requires an
 endpoint status, resume, pause, and inference APIs. The API refuses to start
 without `HF_TOKEN`.
 
+## Quickstart
+
+Minimum steps to run the application locally:
+
+1. Install Docker Engine with the Docker Compose plugin.
+2. Create the runtime environment file:
+
+   ```bash
+   cd app
+   cp .env.example .env
+   ```
+
+3. Edit `.env` and set the required values:
+
+   ```dotenv
+   HF_TOKEN=hf_your_token
+   SCRAPER_TOKEN=replace-with-a-long-random-value
+   SQLITE_PATH=/data/traceguard.sqlite3
+   PUBLIC_APP_URL=http://localhost:3000
+
+   HF_QWEN_ENDPOINT_URL=https://your-qwen-endpoint.endpoints.huggingface.cloud
+   HF_LLAMA_ENDPOINT_URL=https://your-llama-endpoint.endpoints.huggingface.cloud
+   HF_DEEPSEEK_ENDPOINT_URL=https://your-deepseek-endpoint.endpoints.huggingface.cloud
+   HF_GEMMA_ENDPOINT_URL=https://your-gemma-endpoint.endpoints.huggingface.cloud
+
+   HF_ENDPOINT_NAMESPACE=your-huggingface-namespace
+   HF_QWEN_ENDPOINT_NAME=your-qwen-endpoint-name
+   HF_LLAMA_ENDPOINT_NAME=your-llama-endpoint-name
+   HF_DEEPSEEK_ENDPOINT_NAME=your-deepseek-endpoint-name
+   HF_GEMMA_ENDPOINT_NAME=your-gemma-endpoint-name
+   ```
+
+   Follow-up chat also needs `QWEN_API_KEY`, `QWEN_BASE_URL`, and `QWEN_MODEL`.
+   URL analysis can start without those values, but follow-up messages will not
+   work until they are configured.
+
+4. Build and start the containers:
+
+   ```bash
+   docker compose up --build
+   ```
+
+5. Open the app:
+
+   ```text
+   http://localhost:3000
+   ```
+
+6. Optional health check:
+
+   ```bash
+   curl http://localhost:3000/api/health
+   ```
+
+   Expected response:
+
+   ```json
+   {"status":"ok"}
+   ```
+
 ## Architecture
 
 ```text
